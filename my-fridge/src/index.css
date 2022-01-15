@@ -1,0 +1,19 @@
+body {
+  margin: 20px;
+
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  
+}
+
+#login-btn {
+  margin-top: 10px;
+}
