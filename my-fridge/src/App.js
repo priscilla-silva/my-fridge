@@ -1,35 +1,57 @@
 import React, {useState} from "react";
-import Login from "./comps/Login";
+import Loginform from "./comps/Loginform";
+import Button from '@mui/material/Button';
 
 
 
 function App() {
+  const myUser = {
+    username: "priscilla",
+    password: "fridge123"
+  }
 
-  // const myCredentials = {
-  //   email: "priscilla@myfridge.com",
-  //   password: "fridge123"
-  // }
 
-  // const [user, setUser] = useState({email:""});
-  // const [error, setError] = useState("");
+  const [user, setUser] = useState({username:""});
+  const [error, setError] = useState("");
 
-  // const Login = details => {
-  //   console.log(details);
-  // }
+  const Login = details => {
+    console.log(details);
 
-  // const logout = () => {
-  //   console.log("log out");
-  // }
+    if(details.username == myUser.username && details.password == myUser.password) {
+            console.log("Success!");
+            setUser({
+                username: details.username
+            });
+        } else {
+            console.log("Fail!")
+        }
+
+  }
+
+  
+
+  const Logout = () => {
+    setUser({username:""})
+  }
+
 
   return (
     <div className="App">
-      <div className="main">
+      {(user.username != "") ? (
+        <div className="welcome-screen">
+          <h2>Welcome, <span>{user.username}</span></h2>
+          <div><Button id="logout-btn"  variant="contained" onClick={Logout}>Logout</Button></div>
+        </div>
+      ) : (
+        <div className="main">
       <h1>My Fridge</h1>
-      <Login />
+      <Loginform Login={Login} error={error}/>
       <h4>Don't have an account yet? Sign up for free!</h4>
       </div>
-    </div>
-  );
+      )}
+      </div>
+      );
 }
+
 
 export default App;
