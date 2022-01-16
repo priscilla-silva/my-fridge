@@ -1,18 +1,22 @@
 body {
   margin: 100px;
+  background-color: #fce2e2;
 
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+  
 }
 
 h1 {
   font-family: 'Pacifico', cursive;
   margin-bottom: 30px;
   color: #ff5252;
+  display: flex;
+  
 
 }
 
@@ -24,14 +28,20 @@ h4 {
   margin-top: 20px;
 }
 
-.login-form {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  
-}
+
 
 #login-btn {
   margin-top: 10px;
   background-color: #8bc34a;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.email {
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.password {
+  background-color: white;
 }

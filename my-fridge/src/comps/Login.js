@@ -8,9 +8,9 @@ const Login = () => {
 
     return (
     <div className="login-form">
-        <TextField id="outlined-basic" label="E-mail" variant="outlined" />
-        <Button id="login-btn" variant="contained">Login</Button>
-        <h4>Don't have an account yet? Sign up for free!</h4>
+        <div className="email"><TextField  id="outlined-basic" label="E-mail" variant="outlined" /></div>
+        <div className="password"><TextField id="outlined-basic-password" type="password" label="Password" variant="outlined" /></div>
+        <div><Button id="login-btn"  variant="contained">Login</Button></div>
     </div>
     )
 }
