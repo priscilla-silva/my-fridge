@@ -24,6 +24,7 @@ function App() {
             });
         } else {
             console.log("Fail!")
+            setError("Incorrect username and/or password.")
         }
 
   }
