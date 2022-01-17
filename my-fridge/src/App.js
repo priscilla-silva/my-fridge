@@ -1,8 +1,8 @@
 import React, {useState} from "react";
+import {BrowserRouter, Route, Routes, Link} from "react-router-dom";   
 import Loginform from "./comps/Loginform";
 import Signup from "./comps/Signup";
 import Button from '@mui/material/Button';
-
 
 
 function App() {
@@ -36,8 +36,8 @@ function App() {
     setUser({username:""})
   }
 
-
   return (
+    <BrowserRouter>
     <div className="App">
       {(user.username != "") ? (
         <div className="welcome-screen">
@@ -48,13 +48,19 @@ function App() {
         <div className="main">
       <h1>My Fridge</h1>
       <Loginform Login={Login} error={error}/>
+  
       <h4>Don't have an account yet? 
         <br />
-      Sign up for free!</h4>
-      <Signup />
-      </div>
+        <Link to="/Signup">Sign up for free!</Link>
+      </h4>
+      <Routes>
+      <Route path="/Signup"  element={<Signup />} />
+      </Routes>
+      </div>      
+    
       )}
       </div>
+      </BrowserRouter>
       );
 }
 

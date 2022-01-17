@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Signup from './Signup';
+import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
 
 function Loginform({Login, error}) {
 
@@ -16,6 +18,7 @@ function Loginform({Login, error}) {
     }
 
     return (
+    
     <div>
     <form onSubmit={submitHandler}>
     <div className="login-form">
@@ -25,7 +28,9 @@ function Loginform({Login, error}) {
         {(error != "") ? ( <div className="error">{error}</div>) : ""}
     </div>
     </form>
+
         </div>
+   
     )
 }
 
