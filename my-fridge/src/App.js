@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Loginform from "./comps/Loginform";
+import Signup from "./comps/Signup";
 import Button from '@mui/material/Button';
 
 
@@ -47,7 +48,10 @@ function App() {
         <div className="main">
       <h1>My Fridge</h1>
       <Loginform Login={Login} error={error}/>
-      <h4>Don't have an account yet? Sign up for free!</h4>
+      <h4>Don't have an account yet? 
+        <br />
+      Sign up for free!</h4>
+      <Signup />
       </div>
       )}
       </div>
