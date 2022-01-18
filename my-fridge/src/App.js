@@ -1,8 +1,11 @@
-import React, {useState} from "react";
-import {BrowserRouter, Route, Routes, Link} from "react-router-dom";   
+import React, {useState, useEffect, useRef} from "react";
+import {BrowserRouter, Route, Routes, Link} from "react-router-dom";
+import {FaSearch} from "react-icons/fa";
+import Photo from "./comps/Photo";  
 import Loginform from "./comps/Loginform";
 import Signup from "./comps/Signup";
 import Button from '@mui/material/Button';
+
 
 
 function App() {
@@ -10,6 +13,7 @@ function App() {
     username: "priscilla",
     password: "fridge123"
   }
+
 
 
   const [user, setUser] = useState({username:""});
@@ -36,28 +40,55 @@ function App() {
     setUser({username:""})
   }
 
+  const clientId = `?client_id${process.env.REACT_APP_ACCESS_KEY}`;
+  const mainUrl = "https://api.unsplash.com/photos/";
+  const searchurl = "https://api.unsplash.com/search/photos/";
+
+  const [Loading, setLoading] = useState(false);
+    const [photos, setPhotos] = useState([]);
+
+    const fetchImages = async() => {
+        setLoading(true);
+        let url;
+
+        url = `${mainUrl}${clientId}`;
+        
+        try{
+            const response = await fetch(url);
+            const data = await response.json();
+            console.log(data);
+
+        } catch(error) {
+            setLoading(false);
+            console.log(error);
+        }
+    }
+
+    useEffect (() => {
+      fetchImages();
+    }, [])
+
   return (
     <BrowserRouter>
     <div className="App">
       {(user.username != "") ? (
         <div className="welcome-screen">
-          <h2>Welcome, <span>{user.username}</span></h2>
+          <p className="welcome-headline">Welcome, <span>{user.username}</span></p>
           <div><Button id="logout-btn"  variant="contained" onClick={Logout}>Logout</Button></div>
         </div>
       ) : (
         <div className="main">
-      <h1>My Fridge</h1>
+      <p className="headline">My Fridge</p>
       <Loginform Login={Login} error={error}/>
-  
-      <h4>Don't have an account yet? 
+        <p className="signup-tagline">Don't have an account yet? 
         <br />
         <Link to="/Signup">Sign up for free!</Link>
-      </h4>
-      <Routes>
+        <Routes>
       <Route path="/Signup"  element={<Signup />} />
       </Routes>
-      </div>      
-    
+      </p>
+         <Photo />   
+    </div>
       )}
       </div>
       </BrowserRouter>

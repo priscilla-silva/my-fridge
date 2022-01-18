@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import Loginform from "./Loginform";
 
 
 
@@ -27,7 +28,7 @@ const Signup = () => {
             <input type="checkbox" id="termsandcond" name="termsandcond" value="termsandcond"></input>
             <label for="termsandcond"> I agree to the Terms and Conditions.</label>
             </div>
-            <button id="submit" type="submit">Submit</button>
+            <button id="submit" type="submit" onClick={<Loginform />}>Submit</button>
     </form>
         </div>
         </div>
