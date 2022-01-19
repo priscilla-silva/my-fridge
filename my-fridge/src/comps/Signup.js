@@ -1,11 +1,13 @@
-import React from "react";
-import {Link} from "react-router-dom";
-import Loginform from "./Loginform";
+import React, {useState} from "react";
+import Success from "./Success";
+import {BrowserRouter, Route, Routes, Link} from "react-router-dom";
 
 
 
 const Signup = () => {
+
     return (
+        
         <div>
             <div className="signup-form">
     <form>
@@ -28,11 +30,20 @@ const Signup = () => {
             <input type="checkbox" id="termsandcond" name="termsandcond" value="termsandcond"></input>
             <label for="termsandcond"> I agree to the Terms and Conditions.</label>
             </div>
-            <button id="submit" type="submit" onClick={<Loginform />}>Submit</button>
+            <Routes> 
+      <Route path="comps/Success" element={<Success /> } /*Doesn't seem to work*//> 
+      </Routes>
+       <Link to="/Success">
+            <button id="submit" type="submit">Submit</button>
+            </Link> 
     </form>
         </div>
         </div>
+        
     )
 }
 
 export default Signup;
+
+//create account (new component), another comp to redirect user either to local3000
+//split into different comps
