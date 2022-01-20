@@ -43,12 +43,15 @@ function App() {
     <div className="App">
       {(user.username != "") ? ( //get rid of this or see if we can find where it redirects
         <div className="welcome-screen">
+           <p className="logo-small">My Fridge</p>
+          <p className="welcome-headline">Welcome, <span>{user.username}!</span></p>
+          <p className="welcome-subline">What foods would you like to exchange today?</p>
           <Welcome />
-          <div><Button id="logout-btn"  variant="contained" onClick={Logout}>Logout</Button></div>
+          <div className="logout-button"><Button id="logout-btn"  variant="contained" onClick={Logout}>Logout</Button></div>
         </div>
       ) : (
         <div className="main">
-      <p className="headline">My Fridge</p>
+      <p className="logo">My Fridge</p>
      
       <Loginform Login={Login} error={error}/>
     <br/>
