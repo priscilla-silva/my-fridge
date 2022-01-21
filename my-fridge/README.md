@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+My Fridge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+"My Fridge" is an app that allows you to share food, spices, and even leftovers among your contacts. The purpose is to alleviate the great problem that food waste represents.
 
-## Available Scripts
+*--FUNCTIONALITY--*
 
-In the project directory, you can run:
+-> Ideally, one would be able to search and "look" into your contacts' fridges and they'd be able to search yours. If one of you spots an item that you might want, you would just request it.
 
-### `npm start`
+-> The number on the bar represents how many requests the item alreadt has
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+// Proceed to explain components //
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*--FEATURES I WOULD HAVE LIKED TO IMPLEMENT--*
 
-### `npm run build`
+-> A reserve system for the items
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-> A database to upload *actual* food pictures
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-> More user profiles
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+*--CHALLENGES ENCOUNTERED--*
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-> React is too damn hard
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-> Time constraints. I should've started this earlier
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-> Team work. I really believed I would have benefited from working in a team so I wouldn't have to worry about building the whole thing myself. I couldn't do it due to me not being in Sweden for the majority of the JS section
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+*--WHAT I WOULD LIKE TO FURTHER LEARN/IMPROVE--*
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-> A better understanding of React hookx, especially useEffect, which I'm still not quite sure I understand what it does exactly
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-> More tricks in vanilla JS, though fewer and fewer applications use it these days
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
